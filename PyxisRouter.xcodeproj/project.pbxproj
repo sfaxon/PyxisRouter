@@ -10,6 +10,8 @@
 		C3FCB5DD1B5EF3480072C43D /* PyxisRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FCB5DC1B5EF3480072C43D /* PyxisRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3FCB5E41B5EF3480072C43D /* PyxisRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FCB5D91B5EF3480072C43D /* PyxisRouter.framework */; };
 		C3FCB5E91B5EF3480072C43D /* PyxisRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5E81B5EF3480072C43D /* PyxisRouterTests.swift */; };
+		C3FCB5F41B5EF3760072C43D /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5F31B5EF3760072C43D /* Tokenizer.swift */; };
+		C3FCB5F61B5EF3B40072C43D /* TokenizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5F51B5EF3B40072C43D /* TokenizerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		C3FCB5E31B5EF3480072C43D /* PyxisRouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PyxisRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3FCB5E81B5EF3480072C43D /* PyxisRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyxisRouterTests.swift; sourceTree = "<group>"; };
 		C3FCB5EA1B5EF3490072C43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3FCB5F31B5EF3760072C43D /* Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
+		C3FCB5F51B5EF3B40072C43D /* TokenizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 			children = (
 				C3FCB5DC1B5EF3480072C43D /* PyxisRouter.h */,
 				C3FCB5DE1B5EF3480072C43D /* Info.plist */,
+				C3FCB5F31B5EF3760072C43D /* Tokenizer.swift */,
 			);
 			path = PyxisRouter;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				C3FCB5E81B5EF3480072C43D /* PyxisRouterTests.swift */,
+				C3FCB5F51B5EF3B40072C43D /* TokenizerTests.swift */,
 				C3FCB5EA1B5EF3490072C43D /* Info.plist */,
 			);
 			path = PyxisRouterTests;
@@ -142,6 +148,7 @@
 		C3FCB5D01B5EF3480072C43D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = SlashAndBurn;
 				TargetAttributes = {
@@ -193,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FCB5F41B5EF3760072C43D /* Tokenizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FCB5E91B5EF3480072C43D /* PyxisRouterTests.swift in Sources */,
+				C3FCB5F61B5EF3B40072C43D /* TokenizerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +311,7 @@
 		C3FCB5EE1B5EF3490072C43D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -314,12 +324,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.slashandburn.PyxisRouter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		C3FCB5EF1B5EF3490072C43D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
