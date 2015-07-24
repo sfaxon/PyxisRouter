@@ -20,6 +20,45 @@ class TokenizerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    
+    func testTokenEquality() {
+        let sl = Token.Slash
+        let l  = Token.Literal("literal")
+        let sy = Token.Symbol("symbol")
+        let lp = Token.LParen
+        let rp = Token.RParen
+        let d  = Token.Dot
+        let st = Token.Star
+        let o  = Token.Or
+        XCTAssert(sl == Token.Slash,              "Slash should == Slash")
+        XCTAssert(l  == Token.Literal("literal"), "Literal should == Literal")
+        XCTAssert(sy == Token.Symbol("symbol"),   "Symbol should == Symbol")
+        XCTAssert(lp == Token.LParen,             "LParen should == LParen")
+        XCTAssert(rp == Token.RParen,             "RParen should == Rparen")
+        XCTAssert(d  == Token.Dot,                "Dot should == Dot")
+        XCTAssert(st == Token.Star,               "Star should == Star")
+        XCTAssert(o  == Token.Or,                 "Or should == Or")
+    }
+    
+//    func testTokenInEquality() {
+//        let sl = Token.Slash
+//        let l  = Token.Literal("literal")
+//        let sy = Token.Symbol("symbol")
+//        let lp = Token.LParen
+//        let rp = Token.RParen
+//        let d  = Token.Dot
+//        let st = Token.Star
+//        let o  = Token.Or
+//        XCTAssertNotEqual(sl, Token.LParen)
+////        XCTAssert(sl != Token.LParen,              "Slash should != LParen")
+////        XCTAssert(l  != Token.Literal("literal"), "Literal should == Literal")
+//        XCTAssert(sy == Token.Symbol("symbol"),   "Symbol should == Symbol")
+//        XCTAssert(lp == Token.LParen,             "LParen should == LParen")
+//        XCTAssert(rp == Token.RParen,             "RParen should == Rparen")
+//        XCTAssert(d  == Token.Dot,                "Dot should == Dot")
+//        XCTAssert(st == Token.Star,               "Star should == Star")
+//        XCTAssert(o  == Token.Or,                 "Or should == Or")
+//    }
 
     func testPosts() {
         let t = Tokenizer(input: "/posts")

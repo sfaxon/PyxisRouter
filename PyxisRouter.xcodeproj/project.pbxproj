@@ -12,6 +12,10 @@
 		C3FCB5E91B5EF3480072C43D /* PyxisRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5E81B5EF3480072C43D /* PyxisRouterTests.swift */; };
 		C3FCB5F41B5EF3760072C43D /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5F31B5EF3760072C43D /* Tokenizer.swift */; };
 		C3FCB5F61B5EF3B40072C43D /* TokenizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5F51B5EF3B40072C43D /* TokenizerTests.swift */; };
+		C3FCB5F81B5F1BA40072C43D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5F71B5F1BA40072C43D /* Node.swift */; };
+		C3FCB5FA1B5F1BC60072C43D /* TreeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5F91B5F1BC60072C43D /* TreeBuilder.swift */; };
+		C3FCB5FC1B5F1BE90072C43D /* TreeBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5FB1B5F1BE90072C43D /* TreeBuilderTests.swift */; };
+		C3FCB5FE1B5F1F510072C43D /* NodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5FD1B5F1F510072C43D /* NodeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,10 @@
 		C3FCB5EA1B5EF3490072C43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3FCB5F31B5EF3760072C43D /* Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
 		C3FCB5F51B5EF3B40072C43D /* TokenizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizerTests.swift; sourceTree = "<group>"; };
+		C3FCB5F71B5F1BA40072C43D /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		C3FCB5F91B5F1BC60072C43D /* TreeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeBuilder.swift; sourceTree = "<group>"; };
+		C3FCB5FB1B5F1BE90072C43D /* TreeBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeBuilderTests.swift; sourceTree = "<group>"; };
+		C3FCB5FD1B5F1F510072C43D /* NodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,8 @@
 				C3FCB5DC1B5EF3480072C43D /* PyxisRouter.h */,
 				C3FCB5DE1B5EF3480072C43D /* Info.plist */,
 				C3FCB5F31B5EF3760072C43D /* Tokenizer.swift */,
+				C3FCB5F71B5F1BA40072C43D /* Node.swift */,
+				C3FCB5F91B5F1BC60072C43D /* TreeBuilder.swift */,
 			);
 			path = PyxisRouter;
 			sourceTree = "<group>";
@@ -86,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				C3FCB5E81B5EF3480072C43D /* PyxisRouterTests.swift */,
+				C3FCB5FB1B5F1BE90072C43D /* TreeBuilderTests.swift */,
+				C3FCB5FD1B5F1F510072C43D /* NodeTests.swift */,
 				C3FCB5F51B5EF3B40072C43D /* TokenizerTests.swift */,
 				C3FCB5EA1B5EF3490072C43D /* Info.plist */,
 			);
@@ -201,6 +213,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FCB5F41B5EF3760072C43D /* Tokenizer.swift in Sources */,
+				C3FCB5FA1B5F1BC60072C43D /* TreeBuilder.swift in Sources */,
+				C3FCB5F81B5F1BA40072C43D /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FCB5E91B5EF3480072C43D /* PyxisRouterTests.swift in Sources */,
+				C3FCB5FC1B5F1BE90072C43D /* TreeBuilderTests.swift in Sources */,
 				C3FCB5F61B5EF3B40072C43D /* TokenizerTests.swift in Sources */,
+				C3FCB5FE1B5F1F510072C43D /* NodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
