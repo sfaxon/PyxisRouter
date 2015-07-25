@@ -6,7 +6,7 @@
 //  Copyright © 2015 SlashAndBurn. All rights reserved.
 //
 
-class Node: Equatable {
+class Node: Equatable, CustomStringConvertible {
     var children = [Node]()
     let token: Token
     init(token: Token) {
@@ -16,20 +16,26 @@ class Node: Equatable {
     // adds the given child token if it doesn't exist
     // return the existing child, or the newly created node
     func addChild(node: Node) -> Node {
-        let index = self.children.indexOf(node)
-        print("addChild index: \(index)")
+        let index = indexOfTrippleEqualChild(node)
         if index != nil {
-            print("  iterating \(node.describe())")
             return self.children[index!]
         } else {
-            print("  added \(node.describe())")
             self.children.append(node)
         }
         return node
     }
     
-    func describe() -> String {
-        return "\(self.token.describe) -> \(self.children.count)"
+    var description: String {
+        return "\(self.token) -> \(self.children.count)"
+    }
+    
+    private func indexOfTrippleEqualChild(node: Node) -> Int? {
+        for (index, c) in self.children.enumerate() {
+            if node.token === c.token {
+                return index
+            }
+        }
+        return nil
     }
 }
 

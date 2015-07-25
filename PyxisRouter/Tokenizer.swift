@@ -7,7 +7,7 @@
 //
 
 
-enum Token {
+enum Token: CustomStringConvertible {
     case Slash
     case Literal(String)
     case Symbol(String)
@@ -17,14 +17,14 @@ enum Token {
     case Star
     case Or
     
-    var describe: String {
+    var description: String {
         switch self {
         case .Slash:
             return "/"
         case .Literal(let value):
-            return "LITERAL \(value)"
+            return "LITERAL: \(value)"
         case .Symbol(let value):
-            return "SYMBOL \(value)"
+            return "SYMBOL: \(value)"
         case .LParen:
             return "("
         case .RParen:
@@ -40,6 +40,29 @@ enum Token {
 }
 
 func ==(lhs: Token, rhs: Token) -> Bool {
+    switch (lhs, rhs) {
+    case (.Literal(_), .Literal(_)):
+        return true
+    case (.Symbol(_), .Symbol(_)):
+        return true
+    case (.Slash, .Slash):
+        return true
+    case (.LParen, .LParen):
+        return true
+    case (.RParen, .RParen):
+        return true
+    case (.Dot, .Dot):
+        return true
+    case (.Star, .Star):
+        return true
+    case (.Or, .Or):
+        return true
+    default:
+        return false
+    }
+}
+
+func ===(lhs: Token, rhs: Token) -> Bool {
     switch (lhs, rhs) {
     case (.Literal(let la), .Literal(let ra)):
         return la == ra

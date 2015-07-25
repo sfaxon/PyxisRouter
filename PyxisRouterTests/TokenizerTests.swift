@@ -30,14 +30,14 @@ class TokenizerTests: XCTestCase {
         let d  = Token.Dot
         let st = Token.Star
         let o  = Token.Or
-        XCTAssert(sl == Token.Slash,              "Slash should == Slash")
-        XCTAssert(l  == Token.Literal("literal"), "Literal should == Literal")
-        XCTAssert(sy == Token.Symbol("symbol"),   "Symbol should == Symbol")
-        XCTAssert(lp == Token.LParen,             "LParen should == LParen")
-        XCTAssert(rp == Token.RParen,             "RParen should == Rparen")
-        XCTAssert(d  == Token.Dot,                "Dot should == Dot")
-        XCTAssert(st == Token.Star,               "Star should == Star")
-        XCTAssert(o  == Token.Or,                 "Or should == Or")
+        XCTAssert(sl == Token.Slash,       "Slash should == Slash")
+        XCTAssert(l  == Token.Literal(""), "Literal should == Literal")
+        XCTAssert(sy == Token.Symbol(""),  "Symbol should == Symbol")
+        XCTAssert(lp == Token.LParen,      "LParen should == LParen")
+        XCTAssert(rp == Token.RParen,      "RParen should == Rparen")
+        XCTAssert(d  == Token.Dot,         "Dot should == Dot")
+        XCTAssert(st == Token.Star,        "Star should == Star")
+        XCTAssert(o  == Token.Or,          "Or should == Or")
     }
     
 //    func testTokenInEquality() {

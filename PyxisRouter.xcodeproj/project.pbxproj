@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3EAFFA61B631FF2005F00EC /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EAFFA51B631FF2005F00EC /* Parser.swift */; };
+		C3EAFFA81B63201F005F00EC /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EAFFA71B63201F005F00EC /* ParserTests.swift */; };
 		C3FCB5DD1B5EF3480072C43D /* PyxisRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FCB5DC1B5EF3480072C43D /* PyxisRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3FCB5E41B5EF3480072C43D /* PyxisRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FCB5D91B5EF3480072C43D /* PyxisRouter.framework */; };
 		C3FCB5E91B5EF3480072C43D /* PyxisRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5E81B5EF3480072C43D /* PyxisRouterTests.swift */; };
 		C3FCB5F41B5EF3760072C43D /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5F31B5EF3760072C43D /* Tokenizer.swift */; };
 		C3FCB5F61B5EF3B40072C43D /* TokenizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5F51B5EF3B40072C43D /* TokenizerTests.swift */; };
 		C3FCB5F81B5F1BA40072C43D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5F71B5F1BA40072C43D /* Node.swift */; };
-		C3FCB5FA1B5F1BC60072C43D /* TreeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5F91B5F1BC60072C43D /* TreeBuilder.swift */; };
-		C3FCB5FC1B5F1BE90072C43D /* TreeBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5FB1B5F1BE90072C43D /* TreeBuilderTests.swift */; };
+		C3FCB5FA1B5F1BC60072C43D /* RouteTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5F91B5F1BC60072C43D /* RouteTree.swift */; };
+		C3FCB5FC1B5F1BE90072C43D /* RouteTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5FB1B5F1BE90072C43D /* RouteTreeTests.swift */; };
 		C3FCB5FE1B5F1F510072C43D /* NodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCB5FD1B5F1F510072C43D /* NodeTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3EAFFA51B631FF2005F00EC /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		C3EAFFA71B63201F005F00EC /* ParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
 		C3FCB5D91B5EF3480072C43D /* PyxisRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PyxisRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3FCB5DC1B5EF3480072C43D /* PyxisRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PyxisRouter.h; sourceTree = "<group>"; };
 		C3FCB5DE1B5EF3480072C43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,8 +42,8 @@
 		C3FCB5F31B5EF3760072C43D /* Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
 		C3FCB5F51B5EF3B40072C43D /* TokenizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizerTests.swift; sourceTree = "<group>"; };
 		C3FCB5F71B5F1BA40072C43D /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
-		C3FCB5F91B5F1BC60072C43D /* TreeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeBuilder.swift; sourceTree = "<group>"; };
-		C3FCB5FB1B5F1BE90072C43D /* TreeBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeBuilderTests.swift; sourceTree = "<group>"; };
+		C3FCB5F91B5F1BC60072C43D /* RouteTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTree.swift; sourceTree = "<group>"; };
+		C3FCB5FB1B5F1BE90072C43D /* RouteTreeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTreeTests.swift; sourceTree = "<group>"; };
 		C3FCB5FD1B5F1F510072C43D /* NodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +91,8 @@
 				C3FCB5DE1B5EF3480072C43D /* Info.plist */,
 				C3FCB5F31B5EF3760072C43D /* Tokenizer.swift */,
 				C3FCB5F71B5F1BA40072C43D /* Node.swift */,
-				C3FCB5F91B5F1BC60072C43D /* TreeBuilder.swift */,
+				C3FCB5F91B5F1BC60072C43D /* RouteTree.swift */,
+				C3EAFFA51B631FF2005F00EC /* Parser.swift */,
 			);
 			path = PyxisRouter;
 			sourceTree = "<group>";
@@ -96,9 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				C3FCB5E81B5EF3480072C43D /* PyxisRouterTests.swift */,
-				C3FCB5FB1B5F1BE90072C43D /* TreeBuilderTests.swift */,
+				C3FCB5FB1B5F1BE90072C43D /* RouteTreeTests.swift */,
 				C3FCB5FD1B5F1F510072C43D /* NodeTests.swift */,
 				C3FCB5F51B5EF3B40072C43D /* TokenizerTests.swift */,
+				C3EAFFA71B63201F005F00EC /* ParserTests.swift */,
 				C3FCB5EA1B5EF3490072C43D /* Info.plist */,
 			);
 			path = PyxisRouterTests;
@@ -212,8 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3EAFFA61B631FF2005F00EC /* Parser.swift in Sources */,
 				C3FCB5F41B5EF3760072C43D /* Tokenizer.swift in Sources */,
-				C3FCB5FA1B5F1BC60072C43D /* TreeBuilder.swift in Sources */,
+				C3FCB5FA1B5F1BC60072C43D /* RouteTree.swift in Sources */,
 				C3FCB5F81B5F1BA40072C43D /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,7 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FCB5E91B5EF3480072C43D /* PyxisRouterTests.swift in Sources */,
-				C3FCB5FC1B5F1BE90072C43D /* TreeBuilderTests.swift in Sources */,
+				C3FCB5FC1B5F1BE90072C43D /* RouteTreeTests.swift in Sources */,
+				C3EAFFA81B63201F005F00EC /* ParserTests.swift in Sources */,
 				C3FCB5F61B5EF3B40072C43D /* TokenizerTests.swift in Sources */,
 				C3FCB5FE1B5F1F510072C43D /* NodeTests.swift in Sources */,
 			);
@@ -404,6 +412,7 @@
 				C3FCB5EF1B5EF3490072C43D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3FCB5F01B5EF3490072C43D /* Build configuration list for PBXNativeTarget "PyxisRouterTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +421,7 @@
 				C3FCB5F21B5EF3490072C43D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,7 +6,7 @@
 //  Copyright © 2015 SlashAndBurn. All rights reserved.
 //
 
-class TreeBuilder {
+class RouteTree: CustomStringConvertible {
     var rootNode: Node
     init() {
         self.rootNode = Node(token: Token.Slash)
@@ -17,15 +17,15 @@ class TreeBuilder {
         print("\naddTokens:")
         for (index, t) in tokens.enumerate() {
             let tokenNode = Node(token: t)
-            print("index: \(index), t = \(t.describe), currentNode.token = \(currentNode.token.describe)")
+            print("index: \(index), t = \(t), currentNode.token = \(currentNode.token)")
             if tokenNode != self.rootNode {
                 currentNode = currentNode.addChild(tokenNode)
             } 
         }
     }
     
-    func describe() -> String {
-        return "\(self.rootNode.children.map { $0.describe() })"
+    var description: String {
+        return "\(self.rootNode.children.map { $0.description })"
     }
     
 }

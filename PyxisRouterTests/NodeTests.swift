@@ -33,8 +33,24 @@ class NodeTests: XCTestCase {
         let n = Node(token: Token.Slash)
         n.addChild(Node(token: Token.Literal("aoeu")))
         XCTAssertEqual(n.children.count, 1)
+        n.addChild(Node(token: Token.Symbol("dt")))
+        XCTAssertEqual(n.children.count, 2)
+    }
+    
+    func testChildrenHaveSibblingsWithSameTypeToken() {
+        let n = Node(token: Token.Slash)
+        n.addChild(Node(token: Token.Literal("aoeu")))
+        XCTAssertEqual(n.children.count, 1)
         n.addChild(Node(token: Token.Literal("dt")))
         XCTAssertEqual(n.children.count, 2)
+    }
+    
+    func testChildrenDoesNotDupSameTypeToken() {
+        let n = Node(token: Token.Slash)
+        n.addChild(Node(token: Token.Literal("aoeu")))
+        XCTAssertEqual(n.children.count, 1)
+        n.addChild(Node(token: Token.Literal("aoeu")))
+        XCTAssertEqual(n.children.count, 1)
     }
 
     func testPerformanceExample() {

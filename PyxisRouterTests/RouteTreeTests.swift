@@ -9,7 +9,7 @@
 import XCTest
 @testable import PyxisRouter
 
-class TreeBuilderTests: XCTestCase {
+class RouteTreeTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
@@ -21,11 +21,11 @@ class TreeBuilderTests: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
+    func testMatchingBasePath() {
         var posts = Tokenizer(input: "/posts")
         var newPosts = Tokenizer(input: "/posts/new")
         
-        let tree = TreeBuilder()
+        let tree = RouteTree()
         
         tree.addTokens(posts.tokens)
         tree.addTokens(newPosts.tokens)
@@ -33,6 +33,13 @@ class TreeBuilderTests: XCTestCase {
         
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testOptional() {
+        var posts = Tokenizer(input: "/posts(.format)")
+        
+        let tree = RouteTree()
+        tree.addTokens(posts.tokens)
     }
 
     func testPerformanceExample() {
